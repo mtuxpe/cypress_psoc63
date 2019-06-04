@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component_data>
+  <File wkspFile="GeneratedSource/cycfg_capsense.h" installFile="GeneratedSource/cycfg_capsense.h" checksum="36C903283F443A15133CBFD392968E6486540D68"/>
+  <File wkspFile="cy8c6xx7_cm4_dual.ld" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/linker/gcc/cy8c6xx7_cm4_dual.ld" checksum="6C8C7F9AC32522A21ECE64BE694800F79B0E8EAF"/>
+  <File wkspFile="Source/stdio_user.h" installFile="Source/stdio_user.h" checksum="E8650609CE41E536CFE9FC3371CA911FFA0755F0"/>
+  <File wkspFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/system_psoc6_cm4.c" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/system_psoc6_cm4.c" checksum="B3800034C363591C13FC0B3040350334DA5252A3"/>
+  <File wkspFile="Source/main.c" installFile="Source/main.c" checksum="7EEDA3C6C06160DDFD260341957B0E8BF7DCAD2C"/>
+  <File wkspFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/gcc/startup_psoc6_01_cm4.S" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/gcc/startup_psoc6_01_cm4.S" checksum="F588109B80706A2549C1FE9D3E7A526A6F1B3CC9"/>
+  <File wkspFile="Source/stdio_user.c" installFile="Source/stdio_user.c" checksum="FABCBEAE07B9E2AA774780EC9A1807647901BA7F"/>
+  <File wkspFile="design.modus" installFile="design.modus" checksum="9C5180CCCB37DCC2D9EF74A7779435331FCB9DD5"/>
+  <File wkspFile="./psoc6_01_cm0p_sleep_signed.elf" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/cm0p/prebuilt/psoc6_01_cm0p_sleep_signed.elf" checksum="0DCF7490902EA561C76D68485932290555DD7E5D"/>
+  <File wkspFile="setup_readme.txt" installFile="setup_readme.txt" checksum="EF56E62FAD0785F5FCA9B395875139D688ADEA1A"/>
+  <File wkspFile="GeneratedSource/cycfg_capsense.c" installFile="GeneratedSource/cycfg_capsense.c" checksum="2BD073E8351E62A919301F8C963934067B193F75"/>
+  <artifact name="mainapp"/>
+</component_data>
