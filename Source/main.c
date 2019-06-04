@@ -36,32 +36,6 @@
 #include "tsl2561.h"
 
 
-#if 0
-uint8_t veml_wr_word( uint8_t reg, uint16_t val)
-{
-	uint8_t err = TRANSFER_ERROR;
-	uint8_t retry = 3;
-	uint8_t data[3];
-	data[0] = reg;
-	data[1] = (uint8_t)(val & 0xFF);
-	data[2] = (uint8_t)((val & 0xFF00) >> 8);
-
-	while (retry--)
-	{
-		err = WritePacket(data, 3);
-		if (TRANSFER_CMPLT == err)
-			break;
-	}
-	return err;
-}
-
-void ShowError(void)
-{
-    Cy_GPIO_Write(KIT_RGB_R_PORT,KIT_RGB_R_PIN, LED_ON);
-    /* Halt CPU */
-    CY_ASSERT(0u != 0u);
-}
-#endif
 
 /*******************************************************************************
 * Function Name: powerCtl
@@ -219,17 +193,6 @@ int main(void)
     	ShowError();
  	}
 
-#if 0
-    uint16_t veml_conf = VEML6075_CONF_DEFAULT | VEML6075_CONF_SD;
-    status = veml_wr_word(VEML6075_CONF_REG, veml_conf);
-    if (TRANSFER_CMPLT != status)
-    	ShowError();
-    veml_conf = VEML6075_CONF_DEFAULT;
-    status = veml_wr_word(VEML6075_CONF_REG, veml_conf);
-    if (TRANSFER_CMPLT != status)
-     	ShowError();
-#endif
-
     uint8_t buffer[2];
 	uint8_t lux[4];
 
@@ -270,20 +233,7 @@ int main(void)
     }
 
     status = getData(lux);
-/*
-    if (TRANSFER_CMPLT == status)
-    {
 
-     	float ch0 = (lux[1] <<8) + lux[0];
-     	float ch1 = (lux[3] <<8) + lux[2];
-
-     			// Output data to screen
-     	DEBUG_PRINTF("Full Spectrum(IR + Visible) : %.2f lux \r\n", ch0);
-     	DEBUG_PRINTF("Infrared Value : %.2f lux \r\n", ch1);
-     	DEBUG_PRINTF("Visible Value : %.2f lux \r\n", (ch0 - ch1));
-
-    }
-*/
     for(;;)
     {
     	Cy_GPIO_Inv(KIT_RGB_G_PORT, KIT_RGB_G_PIN); /* toggle the pin */

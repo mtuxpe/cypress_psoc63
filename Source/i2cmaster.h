@@ -21,8 +21,7 @@
 
 /* Allocate buffers for I2C operation */
 #define BUFFER_SIZE (128UL)
-//static uint8_t i2cReadBuffer[BUFFER_SIZE];
-//static uint8_t i2cWriteBuffer[BUFFER_SIZE];
+
 /* I2C master desired data rate in Hz */
 #define I2C_DESIRED_DATA_RATE_HZ    (100000U)
 #define I2C_CLK_FREQ_HZ       (1562500U)
