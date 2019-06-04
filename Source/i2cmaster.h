@@ -66,6 +66,7 @@ uint32_t initMaster(void);
 uint8_t ReadStatusPacket(uint8_t rxBuffer[],uint8_t rxsize);
 uint8_t WritePacket(uint8_t* buffer, uint32_t bufferSize);
 
+#if 0
 /* Allocate context for I2C operation */
 static cy_stc_scb_i2c_context_t i2cContext;
 /* Structure for master transfer configuration */
@@ -91,6 +92,6 @@ static const cy_stc_scb_i2c_config_t i2cConfig =
 	.lowPhaseDutyCycle = 15,
 	.highPhaseDutyCycle = 9,
 };
-
+#endif
 
 #endif /* SOURCE_I2CMASTER_H_ */

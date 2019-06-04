@@ -56,8 +56,33 @@
 #include "i2cmaster.h"
 
 
-#ifdef I2C_INTERRUPT
+/* Allocate context for I2C operation */
+static cy_stc_scb_i2c_context_t i2cContext;
+/* Structure for master transfer configuration */
+static cy_stc_scb_i2c_master_xfer_config_t masterTransferCfg =
+{
+    .slaveAddress = 0x39,
+    .buffer       = NULL,
+    .bufferSize   = 0U,
+    .xferPending  = false
+};
 
+static const cy_stc_scb_i2c_config_t i2cConfig =
+{
+	.i2cMode = CY_SCB_I2C_MASTER,
+	.useRxFifo = true,
+	.useTxFifo = true,
+	.slaveAddress = 0U,
+	.slaveAddressMask = 0U,
+	.acceptAddrInFifo = false,
+	.ackGeneralAddr = false,
+	.enableWakeFromSleep = false,
+	.enableDigitalFilter = false,
+	.lowPhaseDutyCycle = 15,
+	.highPhaseDutyCycle = 9,
+};
+
+#ifdef I2C_INTERRUPT
 
 void I2C_Isr(void)
 {
